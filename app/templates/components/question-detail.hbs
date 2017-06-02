@@ -1,3 +1,10 @@
 {{question.content}} by {{question.author}} initial thoughts were {{question.notes}}
 <br>
+
+<h2> Answers </h2>
+<ul>
+  {{#each question.answers as |review|}}
+    {{answer-tile answer=answer destroyAnswer="destroyAnswer"}}
+  {{/each}}
+</ul>
 <button {{action 'delete' question}}>Delete Question</button>
