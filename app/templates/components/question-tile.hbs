@@ -1,0 +1,9 @@
+<li>
+  <strong>{{question.content}}</strong> by <strong>{{question.author}}</strong>. My initial thoughts/the place I got stuck is: <strong>{{question.notes}}</strong>
+  {{#if isNotesShowing}}
+    <p>{{question.notes}} {{action 'notesHide'}}</p>
+  {{else}}
+    <button {{action 'notesShow'}}>Show notes</button>
+  {{/if}}
+  <button {{action 'delete' question}}>Delete Question</button>
+</li>

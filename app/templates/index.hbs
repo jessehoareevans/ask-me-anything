@@ -2,5 +2,11 @@
 
 <p>Where Devs help Devs become better Devs! Feel free to ask any question that you are stuck on and answer any question you think you have the answer to!</p>
 
+<ul>
+  {{#each model as |question|}}
+    {{question-tile question=question}}
+  {{/each}}
+</ul>
+
 {{#link-to 'about'}}About{{/link-to}}
 {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
