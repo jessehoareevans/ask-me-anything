@@ -1,8 +1,3 @@
 <li>
   {{#link-to 'question' question.id}}{{question.author}}'s question is {{question.content}} and the initial thoughts are {{question.notes}} {{/link-to}}
-  {{#if isNotesShowing}}
-    <p>{{question.notes}} {{action 'notesHide'}}</p>
-  {{else}}
-    <button {{action 'notesShow'}}>Show notes</button>
-  {{/if}}
 </li>
